@@ -45,13 +45,13 @@
                <!-- Barra de Navegacion -->
                <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
             <!-- Brand -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="http://localhost:63965/Default.aspx#">
                 <asp:Image ID="Image1" runat="server" Height="40px" ImageUrl="" Width="60px" /></a>
 
             <!-- Links -->
             <ul class="navbar-nav" style="width:400px">
                 <li class="nav-item">
-                    <a class="nav-link" href=" #">Inicio</a>
+                    <a class="nav-link" href=" http://localhost:63965/Default.aspx#">Inicio</a>
 
 
 
@@ -61,8 +61,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="Registros" data-toggle="dropdown">Registros
                     </a>
                     <div class="dropdown-menu bg-success">
-                        <a class="dropdown-item" href="#">Registro de Cartas</a>
-                        <a class="dropdown-item" href="#">Registro de Destinarios</a>
+                        <a class="dropdown-item" href="http://localhost:63965/UI/Registros/Cartas.aspx#">Registro de Cartas</a>
+                        <a class="dropdown-item" href="http://localhost:63965/UI/Registros/Destinatarios.aspx#">Registro de Destinarios</a>
                     </div>
                 </li>
 

@@ -9,4 +9,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
+    <div style="text-align: center;">
+
+        <asp:Label ID="Label1" runat="server" Text="WELCOME!!!" Font-Size="XX-Large"></asp:Label>
+
+    </div>
+
 </asp:Content>
