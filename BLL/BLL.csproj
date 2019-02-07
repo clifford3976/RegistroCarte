@@ -48,10 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CartaBLL.cs" />
-    <Compile Include="RepositorioBase.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio.cs" />
+    <Compile Include="RepositorioCarta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,16 +9,18 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
+    public class Repositorio<T> : IDisposable, IRepository<T> where T : class
     {
         internal Contexto _contexto;
 
-        public RepositorioBase()
+        public Repositorio()
         {
             _contexto = new Contexto();
         }
 
-        public bool Guardar(T entity)
+
+
+        public virtual bool Guardar(T entity)
         {
             bool paso = false;
 
@@ -26,7 +28,7 @@ namespace BLL
             {
                 if (_contexto.Set<T>().Add(entity) != null)
                 {
-                    _contexto.SaveChanges(); //Guardar los cambios
+                    _contexto.SaveChanges();
                     paso = true;
                 }
             }
@@ -36,6 +38,8 @@ namespace BLL
             }
             return paso;
         }
+
+
 
 
         public virtual bool Modificar(T entity)
@@ -43,11 +47,14 @@ namespace BLL
             bool paso = false;
             try
             {
+                _contexto = new Contexto();
+
                 _contexto.Entry(entity).State = EntityState.Modified;
                 if (_contexto.SaveChanges() > 0)
                 {
                     paso = true;
                 }
+
             }
             catch (Exception)
             {
@@ -57,26 +64,32 @@ namespace BLL
         }
 
 
-        public bool Eliminar(int id)
+        public virtual bool Eliminar(int id)
         {
             bool paso = false;
+
             try
             {
                 T entity = _contexto.Set<T>().Find(id);
+
                 _contexto.Set<T>().Remove(entity);
 
                 if (_contexto.SaveChanges() > 0)
+                {
                     paso = true;
-
+                }
                 _contexto.Dispose();
             }
             catch (Exception)
-            { throw; }
+            {
+                throw;
+            }
             return paso;
         }
 
 
-        public virtual T Buscar(int id)
+
+        public T Buscar(int id)
         {
             T entity;
             try
@@ -89,6 +102,7 @@ namespace BLL
             }
             return entity;
         }
+
 
 
         public List<T> GetList(Expression<Func<T, bool>> expression)
