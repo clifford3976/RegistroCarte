@@ -62,7 +62,7 @@
                     </a>
                     <div class="dropdown-menu bg-success">
                         <a class="dropdown-item" href="http://localhost:63965/UI/Registros/Cartas.aspx#">Registro de Cartas</a>
-                        <a class="dropdown-item" href="http://localhost:63965/UI/Registros/Destinatarios.aspx#">Registro de Destinarios</a>
+                        <a class="dropdown-item" href="http://localhost:63965/UI/Registros/Destinatarios.aspx#">Registro de Destinatarios</a>
                     </div>
                 </li>
 
