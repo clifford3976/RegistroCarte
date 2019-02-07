@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="RegistroCarta.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Inicio</title>
+
+   <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    </head>
+<body>
+
+
+
+    <form id="form1" runat="server">
+         <header>
+
+        <div style="background-color: gold; height: 270px;" class="jumbotron jumbotron-fluid">
+            <div class="container"  >
+            <div class="row" style="width: 853px;">
+            <div class="container"  style="width: 602px;">              
+            <h1 style="text-align: center; " top: 0px; class="display-4">La Pagina de las Cartas</h1>
+
+            <p style="text-align: center; " top: 0px; class="lead">CARTAS</p>
+
+            </div>
+            
+
+             </div>
+
+             </div>
+       
+               <!-- Barra de Navegacion -->
+               <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <asp:Image ID="Image1" runat="server" Height="40px" ImageUrl="" Width="60px" /></a>
+
+            <!-- Links -->
+            <ul class="navbar-nav" style="width:400px">
+                <li class="nav-item">
+                    <a class="nav-link" href=" #">Inicio</a>
+
+
+
+                     <!-- Dropdown -->
+
+                     <li class="nav-item dropdown" style="width:400px">
+                    <a class="nav-link dropdown-toggle" href="#" id="Registros" data-toggle="dropdown">Registros
+                    </a>
+                    <div class="dropdown-menu bg-success">
+                        <a class="dropdown-item" href="#">Registro de Cartas</a>
+                        <a class="dropdown-item" href="#">Registro de Destinarios</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown" style="width:400px">
+                    <a class="nav-link dropdown-toggle"  href="#" id="Consultas" data-toggle="dropdown">Consultas
+                    </a>
+                    <div class="dropdown-menu bg-success ">
+                        <a class="dropdown-item" href="#">Consulta Cartas</a>
+                        <a class="dropdown-item" href="#">Consulta Destinarios</a>
+                    </div>
+                </li>
+                
+                </ul>
+               
+                </nav>
+            </div>
+                     </header>
+
+       
+        <div style="margin-top: 100px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            
+            <footer style="text-align: center">
+                <p>&copy; <%: DateTime.Now.Year %> - CopyRight Millien's</p>
+            </footer>
+        </div>
+   </form>
+</body>
+</html>
+
