@@ -1,3 +1,0 @@
-create database RegistroCartaDb
-Go
-use RegistroCartaDb

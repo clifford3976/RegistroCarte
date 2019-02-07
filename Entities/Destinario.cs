@@ -11,24 +11,24 @@ namespace Entities
     {
         [Key]
 
-        public int DestinarioID { get; set; }
-        public DateTime Fecha { get; set; }
+        public int DestinarioID { get; set; }    
         public string Nombres { get; set; }
+        public string Direccion { get; set; }
         public int CartasRecibidas { get; set; }
 
-        public Destinario(int DestinarioId, DateTime fecha, string nombres, int cartasrecibidas)
+        public Destinario(int DestinarioId, string nombres,string direccion, int cartasrecibidas)
         {
             DestinarioID = DestinarioID;
-            Fecha = fecha;
             Nombres = nombres;
+            Direccion = direccion;
             CartasRecibidas = cartasrecibidas;
         }
 
         public Destinario()
         {
             DestinarioID = 0;
-            Fecha = DateTime.Now;
             Nombres = string.Empty;
+            Direccion = string.Empty;
             CartasRecibidas = 0;
         }
     }

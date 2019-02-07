@@ -50,7 +50,6 @@
   <ItemGroup>
     <Compile Include="Carta.cs" />
     <Compile Include="Destinario.cs" />
-    <Compile Include="Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
