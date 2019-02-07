@@ -11,12 +11,19 @@ namespace DAL
     public class Contexto : DbContext
     {
 
+
         public DbSet<Destinario> destinario { get; set; }
         public DbSet<Carta> carta { get; set; }
 
 
+
         public Contexto() : base("ConStr")
         {
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
